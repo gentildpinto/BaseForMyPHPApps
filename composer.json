@@ -1,0 +1,19 @@
+{
+    "name": "gentil/base-for-my-php-apps",
+    "description": "base for web apps in php",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gentil Pinto",
+            "email": "gentil.junior.gp@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    }
+}
