@@ -8,6 +8,6 @@ return [
         "dbname"   => "base",
         "charset"  => "utf8",
         "username" => "root",
-        "password" => "luffy"
+        "password" => "7131"
     ]
 ];
