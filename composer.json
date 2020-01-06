@@ -10,10 +10,13 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "php": ">=5.4"
+    },
     "autoload": {
         "psr-4": {
-            "app\\": "app"
+            "app\\": "app",
+            "core\\": "core"
         }
     }
 }
