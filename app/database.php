@@ -19,7 +19,7 @@ return [
         "dbname"   => "base",
         "charset"  => "utf8",
         "user"     => "root",
-        "password" => "7131",
+        "password" => "luffy",
         "collation" => "utf8_unicode_ci"
     ]
 ];

@@ -26,7 +26,7 @@ class Connection {
             $host      = $config['mysql']['host'];
             $db        = $config['mysql']['dbname'];
             $user      = $config['mysql']['user'];
-            $pass      = $config['mysql']['pass'];
+            $pass      = $config['mysql']['password'];
             $charset   = $config['mysql']['charset'];
             $collation = $config['mysql']['collation'];
 
