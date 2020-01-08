@@ -1,6 +1,6 @@
 <?php
 
-namespace app\classes;
+namespace Core;
 
 class Validation {
     private $validate = [];

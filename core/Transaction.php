@@ -1,13 +1,13 @@
 <?php
 
-namespace app\models;
+namespace Core;
 
 use Throwable;
 use Closure;
 
-class Transaction extends Model {
+class Transaction extends BaseModel {
     
-    public function model($model) {
+    public function Model($model) {
         return new $model;
     }
 
@@ -22,11 +22,4 @@ class Transaction extends Model {
             dd($err->getMessage());
         }
     }
-
-    // public function _get($name) {
-    //     if(!property_exists($this, $name)) {
-    //         $model = __NAMESPACE__.'\\'.ucfirst($name);
-    //         return new $model();
-    //     }
-    // }
 }

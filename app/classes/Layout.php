@@ -1,6 +1,6 @@
 <?php
 
-namespace app\classes;
+namespace App\classes;
 
 class Layout {
 

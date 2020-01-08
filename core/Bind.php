@@ -1,6 +1,6 @@
 <?php
 
-namespace app\classes;
+namespace Core;
 
 class Bind {
     private static $bind = [];
@@ -10,6 +10,6 @@ class Bind {
     }
 
     public static function getConn($key) {
-        return static::$bind[$key];
+    return static::$bind[$key];
     }
 }
