@@ -4,30 +4,47 @@ namespace Core\traits;
 
 use Core\queryBuilders\Insert;
 use Core\queryBuilders\Update;
+use Throwable;
 
 trait PersistDB {
 
     public function insert($attributes) {
-        $attributes = (array) $attributes;
-        $query      = Insert::query($this->table, $attributes);
-        $stmt       = $this->connection->prepare($query);
+        $this->connection->beginTransaction();
 
-        $result = $stmt->execute($attributes);
+        try {
+            $attributes = (array) $attributes;
+            $query      = Insert::query($this->table, $attributes);
+            $stmt       = $this->connection->prepare($query);
 
-        $stmt->closeCursor();
-        
-        return $result;
+            $result = $stmt->execute($attributes);
+
+            $stmt->closeCursor();
+            $this->connection->commit();
+
+            return $result;
+        }catch(Throwable $err) {
+            $this->connection->rollback();
+            dd($err->getMessage());
+        }
     }
 
     public function update($where, $attributes) {
-        $attributes = (array) $attributes;
-        $query      = (new Update)->where($where)->query($this->table, $attributes);
-        $stmt       = $this->connection->prepare($query);
+        $this->connection->beginTransaction();
 
-        $result = $stmt->execute($attributes);
+        try {
+            $attributes = (array) $attributes;
+            $query      = (new Update)->where($where)->query($this->table, $attributes);
+            $stmt       = $this->connection->prepare($query);
 
-        $stmt->closeCursor();
+            $result = $stmt->execute($attributes);
 
-        return $result;
+            $stmt->closeCursor();
+            $this->connection->commit();
+
+            return $result;
+        } catch(Throwable $err) {
+            $this->connection->rollback();
+            dd($err->getMessage());
+        }
     }
 }
