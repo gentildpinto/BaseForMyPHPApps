@@ -1,17 +1,5 @@
 <?php
 
-use app\classes\Layout;
-use app\classes\Routes;
-use app\classes\Uri;
-
-require "../bootstrap.php";
-
-$routes = [
-    '/' => 'controllers/homeController'
-];
-
-$uri = Uri::load();
-$layout = new Layout;
-
-require Routes::load($routes, $uri);
-require $layout->masterLayout('main');
+require __DIR__."/../vendor/autoload.php";
+require __DIR__."/../core/bootstrap.php";
+require __DIR__."/../app/functions/helpers.php";
