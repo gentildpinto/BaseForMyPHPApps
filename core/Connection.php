@@ -37,7 +37,9 @@ class Connection {
                 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
                 return $pdo;
             } catch(Throwable $err) {
-                echo $err->getMessage();
+                #echo $err->getMessage();
+                #Container::serverError();
+                return false;
             }
         }
     }

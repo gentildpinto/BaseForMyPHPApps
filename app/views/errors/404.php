@@ -26,11 +26,11 @@
             </div>
         </div>
     </nav>
-    
+    <br>
     <div class="container align-content-center text-center mt-5">
         <div class="row">
             <div class="col-md-12">
-                <div class="jumbotron">
+                <div class="jumbotron bg-transparent">
                     <h1 class="display-4">Error 404</h1>
                     <p class="lead">Page Not Found</p>
                     <hr class="my-4">

@@ -64,24 +64,28 @@ class Route {
             }
         }
 
-        if($found) {
-            $controller = Container::newController($controller);
-            switch(count((array) $param)) {
-                case 1:
-                    $controller->$action($param[0], $this->getRequest());
-                    break;
-                case 2:
-                    $controller->$action($param[0], $param[1], $this->getRequest());
-                    break;
-                case 3:
-                    $controller->$action($param[0], $param[1], $param[2], $this->getRequest());
-                    break;
-                default:
-                    $controller->$action($this->getRequest());
-            }
-            
+        if(Connection::connect() == false) {
+            Container::serverError();
         } else {
-            Container::pageNotFound();
+            if($found) {
+                $controller = Container::newController($controller);
+                switch(count((array) $param)) {
+                    case 1:
+                        $controller->$action($param[0], $this->getRequest());
+                        break;
+                    case 2:
+                        $controller->$action($param[0], $param[1], $this->getRequest());
+                        break;
+                    case 3:
+                        $controller->$action($param[0], $param[1], $param[2], $this->getRequest());
+                        break;
+                    default:
+                        $controller->$action($this->getRequest());
+                }
+                
+            } else {
+                Container::pageNotFound();
+            }
         }
     }
 }

@@ -16,4 +16,12 @@ class Container {
             echo "<h1>Error 404: Page Not Found</h1>";
         }
     }
+
+    public static function serverError() {
+        if(file_exists(__DIR__."/../app/views/errors/500.php")) {
+            return require __DIR__."/../app/views/errors/500.php";
+        } else {
+            echo "<h1>Error 500: Internal error</h1>";
+        }
+    }
 }
