@@ -1,11 +1,11 @@
 <?php
 
-namespace core;
+namespace Core;
 
 class Container {
 
     public static function newController($controller) {
-        $objController = "app\\controllers\\" . $controller;
+        $objController = "App\\controllers\\" . $controller;
         return new $objController;
     }
 
