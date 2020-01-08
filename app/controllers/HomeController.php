@@ -5,6 +5,7 @@ namespace App\controllers;
 class HomeController extends Controller {
 
     public function index() {
-        echo "funfa";
+        $this->SetPageTitle("Home");
+        $this->RenderView("home", "main");
     }
 }

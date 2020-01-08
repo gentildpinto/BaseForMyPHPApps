@@ -44,6 +44,7 @@ class Route {
         $url      = $this->getUrl();
         $urlArray = explode('/', $url);
         $param = [];
+        $found = false;
         foreach($this->routes as $route) {
             $routeArray = explode('/', $route[0]);
 
