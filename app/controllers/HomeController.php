@@ -6,6 +6,6 @@ class HomeController extends Controller {
 
     public function index() {
         $this->SetPageTitle("Home");
-        $this->RenderView("home", "main");
+        $this->RenderView("home", "layouts/main");
     }
 }
