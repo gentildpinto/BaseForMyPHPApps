@@ -3,7 +3,7 @@
 namespace Core;
 
 use Core\traits\PersistDB;
-use Core\Bind;
+use Core\Container;
 
 abstract class BaseModel {
 
@@ -13,7 +13,7 @@ abstract class BaseModel {
     protected $table;
 
     public function __construct() {
-        $this->connection = Bind::getConn('connection');
+        $this->connection = Container::getConn('connection');
     }
 
     public function All() {

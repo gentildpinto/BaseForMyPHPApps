@@ -4,6 +4,16 @@ namespace Core;
 
 class Container {
 
+    protected static $bind = [];
+
+    public static function bind($key, $value) {
+        static::$bind[$key] = $value;
+    }
+
+    public static function getConn($key) {
+        return static::$bind[$key];
+    }
+
     public static function newController($controller) {
         $objController = "App\\controllers\\" . $controller;
         return new $objController;

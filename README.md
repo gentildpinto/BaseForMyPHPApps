@@ -4,4 +4,8 @@ Commands to use this:
 
 Database:
 
-1 - configure database acces on config.php
+1 - configure database acces on config/config.php
+
+to run project execute on terminal (on the root directory):
+
+# php -S localhost:8000 -t public

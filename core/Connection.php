@@ -8,7 +8,7 @@ use Throwable;
 class Connection {
 
     public static function connect() {
-        $config = require __DIR__."/../app/database.php";
+        $config = require __DIR__."/../config/database.php";
 
         if($config['driver'] == 'sqlite') {
             $sqlite    = __DIR__."/../storage/database/".$config['sqlite']['host'];
@@ -37,9 +37,9 @@ class Connection {
                 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
                 return $pdo;
             } catch(Throwable $err) {
-                #echo $err->getMessage();
-                #Container::serverError();
-                return false;
+                echo $err->getMessage();
+                Container::serverError();
+                #return false;
             }
         }
     }

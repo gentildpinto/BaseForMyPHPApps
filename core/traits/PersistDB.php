@@ -8,7 +8,7 @@ use Throwable;
 
 trait PersistDB {
 
-    public function insert($attributes) {
+    public function Insert($attributes) {
         $this->connection->beginTransaction();
 
         try {
@@ -28,14 +28,15 @@ trait PersistDB {
         }
     }
 
-    public function update($where, $attributes) {
+    public function Update($where, $attributes) {
         $this->connection->beginTransaction();
 
         try {
             $attributes = (array) $attributes;
             $query      = (new Update)->where($where)->query($this->table, $attributes);
             $stmt       = $this->connection->prepare($query);
-
+            var_dump($stmt);
+            return;
             $result = $stmt->execute($attributes);
 
             $stmt->closeCursor();
