@@ -1,6 +1,6 @@
-Commands to use this:
+#Commands to use this project:
 
-1 - composer dump-autoload -o
+1 - composer install
 
 Database:
 
@@ -8,4 +8,4 @@ Database:
 
 to run project execute on terminal (on the root directory):
 
-# php -S localhost:8000 -t public
+- php -S localhost:8000 -t public
