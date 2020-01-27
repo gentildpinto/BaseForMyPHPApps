@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron bg-transparent">
-                    <h1 class="display-4">Error 404</h1>
+                    <h1 class="display-4">Err0r 4<i class="fa fa-sad-tear"></i>4</h1>
                     <p class="lead">Page Not Found</p>
                     <hr class="my-4">
                     <p>Por favor, verifique se a URL digitada está correcta!</p>
@@ -40,10 +40,10 @@
         </div>
     </div>
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/assets/js/jquery-3.3.1.min.js"></script>
     <script src="/assets/js/popper.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/fontawesome/js/all.min.js"></script>
   </body>
 </html>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container text-center">
     <!-- <div class="row">
         <div class="col-md-12">
@@ -16,5 +15,3 @@
         </div>
     </div>
 </div>
-=======
->>>>>>> 8f39be3d007859692a448f2234ce835d3ece7ac3

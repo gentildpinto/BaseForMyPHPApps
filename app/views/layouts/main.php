@@ -8,16 +8,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/assets/css/custom.css">
 
-    <title><?php $this->getPageTitle("|") ?> Framework</title>
+    <title><?php $this->GetPageTitle("|") ?> Framework</title>
   </head>
   <body>
     <?php include("menu.php"); ?>
-    <?php $this->content() ?>
+    <?php $this->Content() ?>
     
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/assets/js/jquery-3.3.1.min.js"></script>
     <script src="/assets/js/popper.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/fontawesome/js/all.min.js"></script>
   </body>
 </html>
