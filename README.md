@@ -1,6 +1,7 @@
 # Commands to use this project:
 
 - composer install
+- composer dump-autoload -o
 
 Database:
 
